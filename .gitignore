@@ -1,6 +1,6 @@
-# exe
-calendar
-calendar.exe
+#exe
+find_nth_term
+find_nth_term.exe
 
 # Object files
 *.o

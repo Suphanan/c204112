@@ -1,16 +1,15 @@
-#include "T112_HW03_1.h"
+#include "T112_HW03_2.h"
 
 int main()
 {
-    int month;
-    int year;
+    int n;
 
-    printf("Please input month and year: ");
-    scanf("%d %d", &month, &year);
-    
-    display_calendar(month, year);
-    
- 
+    printf("Please input n: ");
+    scanf("%d", &n);
+
+    int result = find_nth_term(n);
+    printf("%d\n", result);
+
     return 0;
 }
 
