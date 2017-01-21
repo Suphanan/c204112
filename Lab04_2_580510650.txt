@@ -1,0 +1,68 @@
+/* ชื่อ นามสกุล
+ * 5XXXXXXXX
+ * HW 03
+ * Problem 2
+ * 204112 Sec 00A */
+
+
+#include "T112_Lab04_2.h"
+#include <math.h>
+
+#define Newline '\n' //เอาไว้ขึ้นบรรทัดใหม่
+double back_point(num);
+int int_input()
+{
+    char num;
+    int check = 1;
+    int save;
+    int end = 0;
+    while ((num = getchar()) != Newline) {
+        if ('0' <= num && num <= '9') {
+            save = num - '0';
+            end = (end * 10) + save;
+        } else if (num == '-') {
+            check = -1;
+        }
+
+    }
+    end = end * check;
+    return end;
+}
+double real_input() 
+{
+    int save;
+    double end = 0;
+    double ans = 0;
+    int check = 9;
+    char num;
+    while ((num = getchar()) != Newline) {
+        if ( check == 9 && '0' <= num && num <= '9' ) {
+            save = num - '0';
+            end = (end * 10) + save;
+        } else if (num == '-') {
+            check = -1;
+        }
+
+    }
+    ans = back_point();
+    end = (end + ans) * check;
+    return end;
+}
+double back_point(num)
+{
+    int check = 9;
+    int poweพ =0;
+    int save;
+    donble end;
+    while ((num = getchar()) != Newline) {
+        if (num == '.') {
+            check = 8;
+        } else if (num == 8 && '0' <= n && n <= '9') {
+            save = num - '0';
+            end = end + (save / pow(10, power));
+            power ++;
+        }
+
+    }
+    return end;
+}
