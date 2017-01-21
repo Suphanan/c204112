@@ -1,0 +1,25 @@
+/* 
+* @Author: suphanan_mujarin@cmu.ac.th
+* @Date:   2016-01-19 14:57:18
+* @Last Modified by:   suphanan_mujarin@cmu.ac.th
+* @Last Modified time: 2016-01-19 15:21:27
+*/
+
+#include <stdio.h>
+#include <stdlib.h> //rand & srand
+#include <time.h>
+#define SET_SEED srand(time(NULL)) //set for change 
+#define MAX
+
+int main() {
+    int i;
+    //int out;
+    SET_SEED;
+    srand(time(NULL));
+    for (i =0; i < 5; i++){
+        out =1 + (rand() % 6); //start with 1 
+        printf("%d %d \n",i,out );
+    }
+
+    return 0;
+}

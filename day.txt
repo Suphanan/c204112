@@ -1,0 +1,28 @@
+/* 
+* @Author: User_C08
+* @Date:   2016-01-22 15:17:50
+* @Last Modified by:   User_C08
+* @Last Modified time: 2016-01-22 15:26:38
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int month;
+    int year;
+    printf("Enter month and year: ");
+    sacnf("%d %d",&month ,&year);
+
+    if ((m == 1)) || (m == 2)){ //jan & feb = month 13 & month 14 of the year before
+    m +=12;
+    y -= 1;
+}
+
+    int N = d + 2*m + floor(3 *(m+1)/5) + y + floor(y/4) - floor (y/100) + floor(4/400) + 2;
+    int day = N % 7;
+    printf("day =%d\n", day); //sun =1,mon = 2,tue=3,wed =4,thu=5,fri =6,sat =0
+
+
+    return 0;
+}

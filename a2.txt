@@ -1,0 +1,81 @@
+/* Suphanan Mujarin
+ * 580510640
+ * HW 02
+ * Problem 1
+ * 204112 Sec 003 */
+
+#include <stdio.h>
+#include <stdlib.h> //rand & srand
+#include <time.h>
+#define SET_SEED srand(time(NULL))
+
+int main() {
+int num;
+int random_;
+int i;
+int a;
+int count;
+char again;
+
+
+SET_SEED;
+srand(time(NULL));
+random_= (rand() % 999)+1;
+        printf("%d",random_);
+do{
+
+    for (i=1;i <=5;i++){
+        do
+        {
+            printf("Round %d: Plese input an  interger between 1 - 999: ",i );
+            scanf(" %d",&num);
+        }while(num > 999 || num <=0);
+
+        if (num == random_){
+            printf("Congratulations,you guessed right.\n\a\a\a\a");
+            count =1;
+            break;
+        }
+        else if (num > random_){
+            printf("Sorry,your guess was too high,try again...\n");
+            count =0;
+        }
+        else if (num < random_){
+            printf("Sorry,your guess was too low,try again...\n");
+            count =0;
+        }
+    }
+    printf("The correct answer is %d\n",random_ );
+
+    if (count == 1){
+        printf("You won\n");
+    }
+    if (count == 0){
+        printf("You lost\n");
+
+    }
+    do{
+    printf("play again(Y/N):");
+        scanf("%c",&again);
+
+    }while(again != 'N');
+
+        if (again == 'N'){
+            printf("Bye\n");
+        }
+    
+
+    }while(again == 'Y');
+       
+    
+
+
+        
+
+    
+   
+
+
+    return 0;
+}
+

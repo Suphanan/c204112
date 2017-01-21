@@ -1,0 +1,38 @@
+/* 
+* @Author: suphanan_mujarin@cmu.ac.th
+* @Date:   2016-01-19 15:22:14
+* @Last Modified by:   suphanan_mujarin@cmu.ac.th
+* @Last Modified time: 2016-01-19 16:22:39
+*/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a;
+    scanf("%lf",&a);
+    int low = 0;
+    double high = a;
+    double x =a;
+    /*sing = fabs(a) / a
+    a = fabs(a)*/
+    int sign = 1;
+    if (a < 0){
+        sign = -1;
+        a = fabs(a);
+    }
+    while (fabs((pow(x,3)) - a) > (pow(10,-10))){
+        x =(low + high) /2;
+        if ((pow(x,3)) > a){
+            high = x;
+        }
+        else{
+        low =x;
+            
+        }
+    
+    }
+    x = x * sign;
+    printf("%f\n", x);
+
+    return 0;
+}
