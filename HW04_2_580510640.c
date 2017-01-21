@@ -7,37 +7,25 @@ Problem 2
 */
 
 #include <stdio.h>
-#include <ctype.h>
 
 int main() {
+    int count=0;
     int char_;
-    int keep;
-    int count = 0;
     int space =0;
     while ((char_ =getchar()) != EOF){
-        
-        /*if (isspace(char_)){
-            space++;
-            if (space>1){ 
-                //count--;
-                continue;
-                }
+        if (isspace(char_)){
+            printf(" ");
+           continue;
         }
-        else{
-            space = 0;
-        }*/
-        
         putchar(char_);
         count++;
-        printf("%d",count);
+        //printf("%d\n",count );
 
-        if (count % 30 == 0){
+        if ((count >= 30) && isspace(char_)){
             printf("\n");
-            count = 0;
+            count = 1;
+            }
         }
-
-    
-    }
 
 
     return 0;
