@@ -1,15 +1,14 @@
-#include "T112_HW02_0.h"
+#include "T112_HW03_1.h"
 
 int main()
 {
-    int num;
-    int result;
+    int month;
+    int year;
 
-    printf("Please input an integer: ");
-    scanf("%d", &num);
+    printf("Please input month and year: ");
+    scanf("%d %d", &month, &year);
     
-    result = most_frequent_digit(num);
-    printf("The most frequent digit is: %d\n", result);
+    display_calendar(month, year);
     
  
     return 0;
